@@ -10,6 +10,7 @@ url = "http://192.168.1.65:8080/shot.jpg"
 while True:
     # Read image from URL
     resp = urllib.request.urlopen(url)
+    #Change image to numpy array.
     image_source = np.asarray(bytearray(resp.read()), dtype="uint8")
     image_cv = cv2.imdecode(image_source, -1)
     
